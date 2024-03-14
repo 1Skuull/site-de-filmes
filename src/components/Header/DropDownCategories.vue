@@ -2,24 +2,26 @@
 <template>
   <div>
     <a class="dropdown-link" @mouseover="showDropdown = true" @mouseleave="showDropdown = false">
-    <slot />
+      Categories
     </a>
     <ul v-show="showDropdown" class="dropdown-list" @mouseover="showDropdown = true" @mouseleave="showDropdown = false">
-        <li v-for="categoria in categorias" @click="selectCaragoty(categoria.toLocaleLowerCase())">{{ categoria }}</li>
+      <li v-for="categoria in categorias" @click="selectCategory(categoria.toLocaleLowerCase())">
+        {{ categoria }}
+      </li>
     </ul>
   </div>
-  </template>
+</template>
   
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useRouter } from "vue-router";
-  
+
 const showDropdown = ref<boolean>(false);
 
-const categoriaEscolhida = useRouter()
+const categoriasEscolhida = useRouter()
 
-function selectCaragoty(name:any){
-  categoriaEscolhida.push(`/category/${name}`)
+function selectCategory(name: string) {
+  categoriasEscolhida.push(`/category/${name}`)
 }
 
 const categorias = ref<string[]>([
@@ -32,13 +34,14 @@ const categorias = ref<string[]>([
   'Comedia'
 ])
 
-console.log(categorias.value.map(items => items))
 
 </script>
   
 <style scoped lang="scss">
+@use '../../style';
 
-.dropdown-link{
+
+.dropdown-link {
   background-color: transparent;
   text-decoration: 0;
   color: white;
@@ -46,10 +49,11 @@ console.log(categorias.value.map(items => items))
   font-weight: bold;
   padding: 0 5px;
 }
-.dropdown-link:hover{
-  background-color: #276b9a; 
+
+.dropdown-link:hover {
+  background-color: #276b9a;
 }
-  
+
 .dropdown-list {
   list-style: none;
   padding: 0;
@@ -60,19 +64,19 @@ console.log(categorias.value.map(items => items))
   position: absolute;
   z-index: 1;
 
-  li{
+  li {
     padding: 0 5px;
     cursor: pointer;
     font-size: 1.05rem;
   }
-    
+
   li:hover {
     background-color: #91a7b6;
   }
 
-  a{
+  a {
     text-decoration: 0;
-    color: white; 
+    color: white;
   }
 }
 </style>

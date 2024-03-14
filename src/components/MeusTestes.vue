@@ -1,13 +1,11 @@
 <template>
     <input type="text" v-model="name">
-    <h1>{{name}}</h1>
+    <h1>{{ name }}</h1>
 </template>
 <script setup lang="ts">
 import { ref } from 'vue';
 
 const name = ref("Janbo")
-
-
 
 </script>
 <style scoped lang="scss">
