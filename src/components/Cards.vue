@@ -29,17 +29,13 @@ section{
     padding: 50px 0;
     
 
-    // h1{
-    //     margin-left: 30px;
-    // }
-    
     .container-cards{
         display: flex;
         flex-direction: row;
         justify-content: start;
         align-items: center;
         gap: 5px;
-        overflow-x: scroll;
+        overflow-x: hidden;
     }
 
     .card-movies{
@@ -47,7 +43,6 @@ section{
         min-height: 300px;
         min-width: 200px;
         border-radius: 10px;
-        transition: transform 0.3s ease;
     }
     .card-movies:hover{
         outline: 0;

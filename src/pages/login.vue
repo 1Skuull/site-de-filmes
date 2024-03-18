@@ -5,8 +5,9 @@
         <input :type="confirmInput ? 'text' : 'password'" placeholder="Password">
         <input type="checkbox" id="checkbox" v-model="confirmInput" />
         <!-- <label for="checkbox">Show password</label> -->
-        <a @click="confirmInput = !confirmInput">Show password</a>
+        <!-- <a @click="confirmInput = !confirmInput">Show password</a> -->
         <button>Entrar</button>
+        <router-link to="/register">Faça sua conta</router-link>
     </form>
 </template>
 <script setup lang="ts">
@@ -30,8 +31,17 @@ form{
     h1{
         text-align: center;
         margin-bottom: 15px;
-
     }
+
+    a{
+        text-decoration: none;
+        color: white;
+        margin-top: 10px;
+    }
+    a:hover{
+        text-decoration:underline;
+    }
+
 
     input, button{
         width: 350px;

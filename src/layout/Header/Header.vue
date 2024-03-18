@@ -9,8 +9,8 @@
 
         <div v-if="name">
             <router-link to="/login">Login</router-link>
-            <span>/</span>
-            <router-link to="/register">Register</router-link>
+            <!-- <span>/</span>
+            <router-link to="/register">Register</router-link> -->
         </div>
         <div v-else>
             <a>Cleito Rasta</a>

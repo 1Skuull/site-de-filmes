@@ -39,6 +39,10 @@ form{
         font-weight: bold;
         color: white;
     }
+
+    button{
+        margin-top: 20px;
+    }
     
     input{
         border: 2px solid #91a7b6;

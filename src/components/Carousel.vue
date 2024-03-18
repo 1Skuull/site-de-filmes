@@ -1,10 +1,13 @@
 <template>
     <input type="range" v-model="slideIndex" min="-50"><br>
     <input type="number" v-model="slideIndex">
-    <h1>{{ slideIndex }}</h1>
+    <h1>{{ slides.length + 3 }}</h1>
     <div class="diretion-buttons">
-        <button class="button-left" v-if="slideIndex < 0" @click.stop="slideIndex++"><</button>
-        <button class="button-direita" v-if="slideIndex !== slides.length" @click="slideIndex--">></button>
+        <h1>MELHORES DA SEMANA</h1>
+        <div class="buttons">
+            <button class="button-left" @click.stop="slideIndex++"><</button>
+            <button class="button-direita" @click="slideIndex--">></button>
+        </div>
     </div>
     <div class="carousel-container">
         <div class="carousel-wrapper" :style="{ transform: `translateX(${translateX}px)` }">
@@ -34,22 +37,19 @@ const translateX = computed((): number => {
     // background-color: #20a441;
     // position: relative;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
     // top: 170px;
-    z-index: 1;
+    // z-index: 1;
+
 
     button {
-        background-color: #ffffff5c;
+        background-color: #91a7b6;
         width: 40px;
         height: 40px;
-        // padding: 10px;  
         margin: 5px;
         font-size: 20px;
         color: white;
-        border-radius: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
 }

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import AppFooter from './components/Footer/index.vue';
-import Header from './components/Header/Header.vue';
+import AppFooter from './layout/Footer/index.vue';
+import Header from './layout/Header/Header.vue';
 
 </script>
 
@@ -20,4 +20,3 @@ main{
 }
 
 </style>
-./components/Footer/AppFooter.vue
