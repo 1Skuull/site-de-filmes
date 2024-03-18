@@ -17,7 +17,6 @@
 <script setup lang="ts">
 const props = defineProps({
     title: String,
-
 })
 
 </script>
@@ -40,7 +39,7 @@ section{
         justify-content: start;
         align-items: center;
         gap: 5px;
-        overflow-x: hidden;
+        overflow-x: scroll;
     }
 
     .card-movies{

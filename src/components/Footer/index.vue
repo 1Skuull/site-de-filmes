@@ -15,7 +15,6 @@ footer{
     max-width: 1180px;
 
     h2{
-        font-weight: normal;
         font-size: small;
     }
 
@@ -24,7 +23,7 @@ footer{
         font-weight: bold;
         font-size: medium;
         text-decoration: none;
-        animation: 1ms ease-in;
+        transition: 1s;
     }
     a:hover{
         background-color: #dc143cc5;

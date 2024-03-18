@@ -4,7 +4,8 @@
         <input type="email" placeholder="Email">
         <input :type="confirmInput ? 'text' : 'password'" placeholder="Password">
         <input type="checkbox" id="checkbox" v-model="confirmInput" />
-        <label for="checkbox">Show password</label>
+        <!-- <label for="checkbox">Show password</label> -->
+        <a @click="confirmInput = !confirmInput">Show password</a>
         <button>Entrar</button>
     </form>
 </template>
@@ -33,7 +34,7 @@ form{
     }
 
     input, button{
-        width: 300px;
+        width: 350px;
         padding: 13px;
         font-size: medium;
         background-color: #222b36;

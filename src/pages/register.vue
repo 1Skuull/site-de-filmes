@@ -31,7 +31,7 @@ form{
     }
 
     input, button{
-        width: 300px;
+        width: 350px;
         padding: 13px;
         font-size: medium;
         background-color: #222b36;

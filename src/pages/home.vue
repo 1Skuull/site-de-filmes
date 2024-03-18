@@ -28,6 +28,8 @@ import Cards from "../components/Cards.vue"
     justify-content: center;
     align-items: center;
     gap: 5px;
+    
+
 
     .home{
         background-color: #91a7b6;

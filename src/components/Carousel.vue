@@ -2,11 +2,11 @@
     <input type="range" v-model="slideIndex" min="-50"><br>
     <input type="number" v-model="slideIndex">
     <h1>{{ slideIndex }}</h1>
+    <div class="diretion-buttons">
+        <button class="button-left" v-if="slideIndex < 0" @click.stop="slideIndex++"><</button>
+        <button class="button-direita" v-if="slideIndex !== slides.length" @click="slideIndex--">></button>
+    </div>
     <div class="carousel-container">
-        <div class="diretion-buttons">
-            <button class="button-left" v-if="slideIndex < 0" @click="slideIndex++">←</button>
-            <button class="button-direita" v-if="slideIndex !== slides.length" @click="slideIndex--">→</button>
-        </div>
         <div class="carousel-wrapper" :style="{ transform: `translateX(${translateX}px)` }">
             <div v-for="(slide, index) in slides" :key="index" class="carousel-slide">
                 Slide {{ slide }}
@@ -17,7 +17,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 
-const slides = ref<number[]>([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]) // Adicione os conteúdos dos slides aqui
+const slides = ref<number[]>([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) // Adicione os conteúdos dos slides aqui
 const slideIndex = ref<number>(0)
 const slideWidth = ref<number>(300) // Largura dos slides
 
@@ -32,16 +32,16 @@ const translateX = computed((): number => {
 <style scoped lang="scss">
 .diretion-buttons {
     // background-color: #20a441;
-    position: relative;
+    // position: relative;
     display: flex;
-    justify-content: space-between;
-    top: 170px;
+    justify-content: flex-end;
+    // top: 170px;
     z-index: 1;
 
     button {
-        background-color: #276b9a;
-        width: 50px;
-        height: 50px;
+        background-color: #ffffff5c;
+        width: 40px;
+        height: 40px;
         // padding: 10px;  
         margin: 5px;
         font-size: 20px;
