@@ -15,3 +15,21 @@ $primary-color: #222b36;
   box-sizing: border-box;
   // font-size: 62.5%;
 }
+
+/* ---------------------------------Scrollbar-------------------------------- */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6c6c6cb9;
+  transition: 1s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #276b9a;
+}

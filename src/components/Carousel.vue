@@ -1,11 +1,9 @@
 <template>
-    <input type="range" v-model="slideIndex" min="-50"><br>
-    <input type="number" v-model="slideIndex">
-    <h1>{{ slides.length + 3 }}</h1>
+    <h1>Slides: {{ slides.length }}</h1>
     <div class="diretion-buttons">
-        <h1>MELHORES DA SEMANA</h1>
+        <h1>Titulo aleatorio</h1>
         <div class="buttons">
-            <button class="button-left" @click.stop="slideIndex++"><</button>
+            <button class="button-left" @click="slideIndex++"><</button>
             <button class="button-direita" @click="slideIndex--">></button>
         </div>
     </div>
@@ -42,14 +40,19 @@ const translateX = computed((): number => {
     // top: 170px;
     // z-index: 1;
 
+    .buttons{
+        display: flex;
+        gap: 4px;
+    }
 
     button {
         background-color: #91a7b6;
         width: 40px;
         height: 40px;
-        margin: 5px;
         font-size: 20px;
         color: white;
+        margin: 3px 0;
+        border-radius: 3px;
     }
 
 }
@@ -73,5 +76,6 @@ const translateX = computed((): number => {
         min-width: 200px;
         padding: 20px;
         /* Espaçamento entre os slides */
+        border-radius: 5px;
     }
 }</style>

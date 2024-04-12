@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AppFooter from './layout/Footer/index.vue';
+import Footer from './layout/Footer/index.vue';
 import Header from './layout/Header/Header.vue';
 
 </script>
@@ -9,7 +9,7 @@ import Header from './layout/Header/Header.vue';
   <main>
     <RouterView></RouterView>
   </main>
-  <AppFooter />
+  <Footer />
 </template>
 
 <style scoped lang="scss">
@@ -18,5 +18,4 @@ main{
   max-width: 1180px;
   min-height:870px;
 }
-
 </style>

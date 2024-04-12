@@ -37,9 +37,11 @@ form{
         text-decoration: none;
         color: white;
         margin-top: 10px;
+        font-weight: bold;
+        padding: 0 3px;
     }
     a:hover{
-        text-decoration:underline;
+        background-color: #276b9a;
     }
 
 
