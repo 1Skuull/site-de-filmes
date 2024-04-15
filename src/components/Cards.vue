@@ -43,10 +43,11 @@ section{
         min-height: 300px;
         min-width: 200px;
         border-radius: 10px;
-    }
-    .card-movies:hover{
-        outline: 0;
-        border: 3px solid #276b9a;
+        
+        &:hover{
+            outline: 0;
+            border: 3px solid #276b9a;
+        }
     }
 }
 </style>

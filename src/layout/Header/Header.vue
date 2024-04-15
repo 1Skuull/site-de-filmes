@@ -9,8 +9,8 @@
 
         <div v-if="name">
             <router-link to="/login">Login</router-link>
-            <!-- <span>/</span>
-            <router-link to="/register">Register</router-link> -->
+            <span>/</span>
+            <router-link to="/register">Register</router-link>
         </div>
         <div v-else>
             <a>Cleito Rasta</a>
@@ -42,11 +42,11 @@ header {
         font-weight: bold;
         padding: 0 5px;
 
+        &:hover {
+            background-color: #276b9a;
+        }
     }
 
-    a:hover {
-        background-color: #276b9a;
-    }
 
     nav {
         display: flex;

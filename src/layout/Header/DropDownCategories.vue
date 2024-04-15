@@ -48,11 +48,12 @@ const categorias = ref<string[]>([
   font-size: 1.05rem;
   font-weight: bold;
   padding: 0 5px;
+  
+  &:hover {
+    background-color: #276b9a;
+  }
 }
 
-.dropdown-link:hover {
-  background-color: #276b9a;
-}
 
 .dropdown-list {
   list-style: none;
@@ -68,11 +69,12 @@ const categorias = ref<string[]>([
     padding: 0 5px;
     cursor: pointer;
     font-size: 1.05rem;
+    
+    &:hover {
+      background-color: #91a7b6;
+    }
   }
 
-  li:hover {
-    background-color: #91a7b6;
-  }
 
   a {
     text-decoration: 0;

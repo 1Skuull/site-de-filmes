@@ -24,10 +24,11 @@ footer{
         font-size: medium;
         text-decoration: none;
         transition: 1s;
-    }
-    a:hover{
-        background-color: #dc143cc5;
-        color: #ffffffdc;
+        
+        &:hover{
+            background-color: #dc143cc5;
+            color: #ffffffdc;
+        }
     }
 }
 

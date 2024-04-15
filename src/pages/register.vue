@@ -47,19 +47,21 @@ form{
     input{
         border: 2px solid #91a7b6;
         transition: 1s;
-    }
-    input:focus{
-        border: 2px solid #276b9a;
-        outline: 0;
+        
+        &:focus{
+            border: 2px solid #276b9a;
+            outline: 0;
+        }
     }
 
     button{
         background-color: #91a7b6;
         cursor: pointer;
         transition: 1s;
-    }
-    button:hover{
-        background-color: #276b9a;
+        
+        &:hover{
+            background-color: #276b9a;
+        }
     }
 }
 </style>

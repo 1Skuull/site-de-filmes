@@ -9,7 +9,7 @@ const router  = useRoute()
 </script>
 <style scoped lang="scss">
 .rotas{
-    background-color: rgba(220, 20, 60, 0.609);
+    background-color: #276b9a;
     // height: 100vh;
 }
 </style>
